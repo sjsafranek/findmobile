@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' *; style-src 'self' 'unsafe-inline'; media-src *">
+        <!--
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' http://ips.colab.duke.edu:8888 http://52.18.218.56:8080 http://a.tile.osm.org http://b.tile.osm.org http://c.tile.osm.org http://a.data.osmbuildings.org http://b.data.osmbuildings.org http://c.data.osmbuildings.org http://d.data.osmbuildings.org; style-src 'self' 'unsafe-inline'; media-src *">
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+<!--         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" /> -->
+        <link rel="stylesheet" type="text/css" href="css/stefans.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+        <title>F.I.N.D.</title>
+
+    </head>
+    <body>
+        <div class="app">
+
+            <h1>Find IPS Mobile</h1>
+
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+
+            <p class="header">
+                <button class="button buttonexit" type="submit" id="settings">
+                    <i class="icon-cogs"></i> Options
+                </button>
+                <div id="options" style="display:none;">
+                    <div style="border:solid 1px;">
+                        <p>
+                            <label>FIND API Server:</label> <br>
+                            <input type="text" name="AUTH" id="AUTH" size="25" value="http://52.18.218.56:8080"><br>
+                        </p>
+                        <p>
+                            <label>Debug:</label>
+                            <input type="radio" name="debug" id="debugOn" value="on">On
+                            <input type="radio" name="debug" id="debugOff" value="off" checked>Off
+                        </p>
+                    </div>
+                </div>
+                <hr>
+            <p> <!-- End header -->
+
+            <div id="authentication">
+                <h2>Log In</h2>
+                <p>
+                    <div>
+                        <label style="height:2px; line-height:21px; text-align: right; padding-right: 6px; width:90px;">Username:</label> 
+                        <input class="inputtextfield" type="text" name="username" id="username" size="13" value="" autocapitalize="none">
+                    </div>
+                    <div>
+                        <label style="height:20px; line-height:21px; text-align: right; padding-right: 6px; width:90px;">Password:</label> 
+                        <input class="inputtextfield" type="password" name="password" id="password" size="13" value="">
+                    </div>
+                </p>
+                <p>
+                    <button class="button buttongo" type="submit" id="Login">
+                        <i class="icon-signin"></i> Submit
+                    </button>
+                </p>
+            </div> <!-- End #authentication -->
+
+            <footer id="copyright" class="footer">
+                <hr>
+                Framework for Internal Navigation and Discovery, Hypercube Platforms
+                <br>
+                Copyright © Stefan Safranek, Zackary N. Scholl 2014-2015
+            </footer> <!-- End footer -->
+
+
+        </div>  <!-- End #app-->
+
+        <script src="jquery-1.11.0.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+    </body>
+</html>
