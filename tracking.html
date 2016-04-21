@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' *; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/stefans.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+        <title>F.I.N.D.</title>
+
+    </head>
+    <body>
+        <div class="app">
+
+            <h1>Find IPS Mobile</h1>
+
+            <div class="blink">
+                <p class="wifiOn" id="wifiOn" style="display:none;">Fingerprinting is active.</p>
+                <p class="wifiOff" id="wifiOff">Fingerprinting is not active.</p>
+            </div>
+
+            <p class="header">
+                <button class="button buttonexit" type="submit" id="learning">
+                    <i class="icon-book"></i> Learning
+                </button>
+                <button class="button buttonexit" type="submit" id="settings">
+                    <i class="icon-cogs"></i> Options
+                </button>
+                <div id="options" style="display:none;">
+                    <div style="border:solid 1px;">
+                        <p>
+                            <label>Log</label>
+                            <div id="messages"> </div>
+                        </p>
+                        <p>
+                            <button class="button buttonexit" type="submit" id="logout">
+                                <i class="icon-signout"></i> Logout
+                            </button>
+                        </p>
+                    </div>
+                </div>
+                <hr>
+            <p> <!-- End header -->
+
+
+            <div id="machinelearning">
+                <h2><i class="icon-compass"></i> Tracking</h2>
+
+                <p>
+                    <label>Current Location:&nbsp;</label><span id="current"> Unknown </span><br>
+                </p>
+
+                <p>
+                    <div id="map"> </div>
+                </p>
+
+                <p>
+                    <button class="button buttongo" type="submit" id="on">On</button>
+                    <button class="button buttonstop" type="submit" id="off">Off</button>
+                </p>
+
+            </div> <!-- End #machinelearning -->
+
+        </div>  <!-- End #app-->
+
+        <link rel="stylesheet" href="css/leaflet.css" />
+        <script src="js/jquery-1.11.0.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/FindTracker.js"></script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/FindFingerPrinting.js"></script>
+        <script type="text/javascript" src="js/tracking.js"></script>
+
+    </body>
+</html>
