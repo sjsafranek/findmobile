@@ -42,6 +42,7 @@ function TrackWifiOff() {
         document.getElementById('wifiOn').setAttribute('style','display:none;');
         document.getElementById('wifiOff').setAttribute('style','display:block;');
         ffp.stop();
+        $('#progress').html(0.0);
     }
     catch(err) {
         alert(JSON.stringify({
@@ -112,7 +113,7 @@ function ToggleOptions() {
 }
 
 function Sync() {
-    console.log(Sync);
+    $("#messages").html("sync");
     $.ajax({
         crossDomain: true,
         dataType: 'jsonp',
@@ -132,6 +133,7 @@ function Sync() {
                 window.localStorage.setItem('machinelearning', data.machinelearning);
                 window.localStorage.setItem('geospatial', data.geospatial.address);
                 user_info = data;
+                $("#messages").html(user_info);
                 BuildFloorSelector();
             }
             catch(err){  
@@ -186,7 +188,7 @@ var app = {
             TrackWifiOff();
             window.location = "index.html";
         });
-        // document.getElementById("sync").addEventListener(press, Sync);
+        document.getElementById("sync").addEventListener(press, Sync);
         document.getElementById("tracking").addEventListener(press, function(){
             window.location = "tracking.html";
         });
